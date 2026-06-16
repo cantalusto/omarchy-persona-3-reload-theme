@@ -5,6 +5,7 @@ electric blue, ice white and deep navy, with the S.E.E.S. red as an accent.
 
 ![Walker launcher](showcase.png)
 ![fastfetch, LazyVim and music player](showcase2.png)
+![SDDM login screen](showcase-login.png)
 
 ## Palette
 
