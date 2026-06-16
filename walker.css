@@ -1,0 +1,60 @@
+/* Walker — Persona 3 Reload.
+   Leans on Omarchy's base walker style; we set the theme color vars and a few
+   high-specificity overrides. Royal-blue panel, white text/icons, P3 logo
+   top-right, SEES banner bottom, white "pill" selection with dark-blue text. */
+
+@define-color base         #1746c2;   /* royal blue panel (used by base .box-wrapper) */
+@define-color text         #eaf3ff;   /* near-white text/icons */
+@define-color border       #2f6fd0;   /* lighter blue edge */
+@define-color background   #0a0f1c;   /* deep navy */
+@define-color selected-text #103a86;  /* dark blue text on the white pill */
+
+/* Opaque royal-blue panel + P3 logo (top-right) + SEES banner (bottom).
+   If the images ever fail to load, the gradient/@base still give a solid panel. */
+window .box-wrapper {
+    background-color: #1746c2;
+    background-image:
+        url("walker-p3logo.png"),
+        url("walker-sees.png"),
+        linear-gradient(165deg, #1b56d4 0%, #1340a6 100%);
+    background-position: 96% 14px, right bottom, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 46px, 210px, cover;
+    border: 1px solid alpha(@border, 0.65);
+    border-radius: 14px;
+    /* extra bottom padding reserves room for the SEES banner below the list */
+    padding: 12px 12px 74px 12px;
+}
+
+/* Search row: transparent over the panel, thin light divider underneath */
+window .search-container {
+    background: transparent;
+    border-bottom: 2px solid alpha(@text, 0.35);
+    padding: 10px 12px 12px 12px;
+    margin: 0 2px 8px 2px;
+}
+
+window .input placeholder {
+    color: @text;
+    opacity: 0.6;
+}
+
+/* Selected row = white pill (text/icon color comes from @selected-text in base) */
+window child:selected .item-box {
+    background: #f4f8ff;
+    border-radius: 14px;
+    margin: 0 2px;
+}
+
+window child:selected {
+    background: transparent;
+}
+
+window .item-box {
+    padding: 2px 12px;
+}
+
+/* Compact rows (base uses a tall 14px vertical padding) */
+window .item-text-box {
+    padding: 7px 0;
+}

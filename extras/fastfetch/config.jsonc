@@ -1,0 +1,144 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "file",
+    "source": "~/.config/omarchy/themes/persona-3-reload/extras/fastfetch/persona.txt",
+    "color": { "1": "38;2;30;167;255" },
+    "padding": {
+      "top": 1,
+      "right": 4,
+      "left": 2
+    }
+  },
+  "modules": [
+    "break",
+    {
+      "type": "custom",
+      "format": "\u001b[38;2;47;111;208m┌──────────────────────Hardware──────────────────────┐"
+    },
+    {
+      "type": "host",
+      "key": " PC",
+      "keyColor": "38;2;30;167;255"
+    },
+    {
+      "type": "cpu",
+      "key": "│ ├",
+      "showPeCoreCount": true,
+      "keyColor": "38;2;30;167;255"
+    },
+    {
+      "type": "gpu",
+      "key": "│ ├",
+      "detectionMethod": "pci",
+      "keyColor": "38;2;30;167;255"
+    },
+    {
+      "type": "display",
+      "key": "│ ├󱄄",
+      "keyColor": "38;2;30;167;255"
+    },
+    {
+      "type": "disk",
+      "key": "│ ├󰋊",
+      "keyColor": "38;2;30;167;255"
+    },
+    {
+      "type": "memory",
+      "key": "│ ├",
+      "keyColor": "38;2;30;167;255"
+    },
+    {
+      "type": "swap",
+      "key": "└ └󰓡 ",
+      "keyColor": "38;2;30;167;255"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[38;2;47;111;208m└────────────────────────────────────────────────────┘"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "\u001b[38;2;47;111;208m┌──────────────────────Software──────────────────────┐"
+    },
+    {
+      "type": "command",
+      "key": " OS",
+      "keyColor": "38;2;95;196;255",
+      "text": "version=$(omarchy-version); echo \"Omarchy $version\""
+    },
+    {
+      "type": "command",
+      "key": "│ ├󰘬",
+      "keyColor": "38;2;95;196;255",
+      "text": "branch=$(omarchy-version-branch); echo \"$branch\""
+    },
+    {
+      "type": "kernel",
+      "key": "│ ├",
+      "keyColor": "38;2;95;196;255"
+    },
+    {
+      "type": "wm",
+      "key": "│ ├",
+      "keyColor": "38;2;95;196;255"
+    },
+    {
+      "type": "de",
+      "key": " DE",
+      "keyColor": "38;2;95;196;255"
+    },
+    {
+      "type": "terminal",
+      "key": "│ ├",
+      "keyColor": "38;2;95;196;255"
+    },
+    {
+      "type": "packages",
+      "key": "│ ├󰏖",
+      "keyColor": "38;2;95;196;255"
+    },
+    {
+      "type": "wmtheme",
+      "key": "│ ├󰉼",
+      "keyColor": "38;2;95;196;255"
+    },
+    {
+      "type": "command",
+      "key": "│ ├󰸌",
+      "keyColor": "38;2;95;196;255",
+      "text": "theme=$(omarchy-theme-current); echo -e \"$theme \\e[38m●\\e[37m●\\e[36m●\\e[35m●\\e[34m●\\e[33m●\\e[32m●\\e[31m●\""
+    },
+    {
+      "type": "terminalfont",
+      "key": "└ └",
+      "keyColor": "38;2;95;196;255"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[38;2;47;111;208m└────────────────────────────────────────────────────┘"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "\u001b[38;2;47;111;208m┌────────────────────Uptime / Age────────────────────┐"
+    },
+    {
+      "type": "command",
+      "key": "󱦟 OS Age",
+      "keyColor": "38;2;21;115;184",
+      "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
+    },
+    {
+      "type": "uptime",
+      "key": "󱫐 Uptime",
+      "keyColor": "38;2;21;115;184"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[38;2;47;111;208m└────────────────────────────────────────────────────┘"
+    },
+    "break"
+  ]
+}
