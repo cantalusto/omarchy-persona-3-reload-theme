@@ -5,7 +5,6 @@ electric blue, ice white and deep navy, with the S.E.E.S. red as an accent.
 
 ![Walker launcher](showcase.png)
 ![fastfetch, LazyVim and music player](showcase2.png)
-![SDDM login screen](showcase-login.png)
 
 ## Palette
 
@@ -44,30 +43,15 @@ When you run `omarchy theme set "Persona 3 Reload"`, these apply **automatically
 
 ## Boot / Unlock screen (Plymouth + SDDM)
 
-The **reboot login screen** is set via Omarchy's Unlock menu:
+The **boot splash and reboot login screen** are set via Omarchy's Unlock menu:
 
 > Open the Omarchy menu → **Style → Unlock → Persona 3 Reload** (enter your password)
 
-By default this gives the **P3 logo on navy** — Omarchy's unlock system only
-supports a centered logo on a solid color, so this is what installs cleanly for
-everyone, automatically.
+This applies the glowing **Persona 3 Reload logo on deep navy** to both the
+Plymouth boot screen and the SDDM login. It installs cleanly for everyone and
+survives reboots and `omarchy update`.
 
-### Optional: full-image login background
-
-Want the underwater Makoto as a **full-screen background on the reboot login**
-(like the in-session lock)? That needs a small local tweak, because Omarchy
-regenerates the SDDM screen from a fixed template:
-
-```bash
-# 1) First apply the unlock:  Style -> Unlock -> Persona 3 Reload
-# 2) Then run:
-bash ~/.config/omarchy/themes/persona-3-reload/extras/sddm-background.sh
-# 3) Log out or reboot
-```
-
-> ⚠️ This edits a system file (needs `sudo`) and is **not durable** — running
-> Style → Unlock again, or `omarchy update`, regenerates the login screen and
-> removes it. Just re-run the script to restore it.
+![Login screen](showcase-login.png)
 
 ## Extras — install manually
 
@@ -117,7 +101,7 @@ omarchy theme set "Persona 3 Reload"
 > copies in `~/.config/` instead.
 
 **The extras don't auto-update.** If an extra changed upstream, re-run its `cp`
-command (or the SDDM script) after updating.
+command after updating.
 
 ## Wallpapers & credits
 
